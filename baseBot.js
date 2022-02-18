@@ -1,7 +1,6 @@
 class BaseBot{
 
     constructor() {
-        this.gameHistory = [];
         this._points = 0
     }
 

@@ -2,8 +2,9 @@ const BaseBot = require("./baseBot.js")
 
 class FancyBot extends BaseBot {
 
-    constructor(gameHistory, _points) {
-        super(gameHistory, _points);
+    constructor() {
+        super();
+        this.gameHistory = []
     }
 
     play() {
