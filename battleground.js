@@ -1,33 +1,34 @@
 //FIGHT
 
+const FancyBot = require("./fancyBot.js")
+
 let p1 = new FancyBot();
 let p2 = new FancyBot();
-let p3 = new BaseBot();
 
 function battle(bot1, bot2) {
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 20; i++) {
 
         let act1 = bot1.play()
         let act2 = bot2.play()
 
         if (act1 === 1 && act2 === 1) {
-            bot1.memorize(act2, 3)
-            bot2.memorize(act1, 3)
+            bot1.memorize(act2)
+            bot2.memorize(act1)
         }
 
         if (act1 === 0 && act2 === 0) {
-            bot1.memorize(act2, 1)
-            bot2.memorize(act1, 1)
+            bot1.memorize(act2)
+            bot2.memorize(act1)
         }
 
         if (act1 === 1 && act2 === 0) {
-            bot1.memorize(act2, 0)
-            bot2.memorize(act1, 5)
+            bot1.memorize(act2)
+            bot2.memorize(act1)
         }
 
         if (act1 === 0 && act2 === 1) {
-            bot1.memorize(act2, 5)
-            bot2.memorize(act1, 0)
+            bot1.memorize(act2)
+            bot2.memorize(act1)
         }
     } 
     console.log("p1", bot1._points);

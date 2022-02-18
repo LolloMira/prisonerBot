@@ -1,4 +1,4 @@
-class BaseBot {
+class BaseBot{
 
     constructor() {
         this.gameHistory = [];
@@ -25,9 +25,10 @@ class BaseBot {
         //optional
     }
 
-    memorize(number, pointz) {
+    memorize(number) {
         this.gameHistory.push(number)
-        this.point += pointz
     }
 
 }
+
+module.exports = BaseBot

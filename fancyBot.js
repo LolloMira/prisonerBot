@@ -1,3 +1,5 @@
+const BaseBot = require("./baseBot.js")
+
 class FancyBot extends BaseBot {
 
     constructor(gameHistory, _points) {
@@ -25,16 +27,17 @@ class FancyBot extends BaseBot {
         } 
         
         if (enemySilence >= 3 && enemySilence - enemyTreason >= 3) {
-            return (Math.random() < 0.6 ? 0 : 1)
+            return (Math.random() < 0.5 ? 0 : 1)
         }
 
         return (Math.random() < 0.8 ? 1 : 0)
     }
 
     
-    memorize(number, pointz) {
+    memorize(number) {
         this.gameHistory.push(number)
-        this._points += pointz
     }
 
 }
+
+module.exports = FancyBot
